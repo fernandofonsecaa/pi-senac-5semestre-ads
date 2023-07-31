@@ -1,16 +1,20 @@
 const express = require('express');
-
 const routes = express.Router();
 
-routes.post('/users', (request, response) => {
-    const body = request.body;
-    console.log(body);
+const teacherController = require('./controllers/teacherController');
+const classesControllers = require('./controllers/classesController');
+const profileController = require('./controllers/profileController');
+const sessionController = require('./controllers/sessionController');
 
+routes.post('/sessions', sessionController.create);
 
-    return response.json({ 
-        evento: 'pi-senac',
-        test: 'fernandofonseca'
-    });
-});
+routes.get('/teachers', teacherController.index);
+routes.post('/teachers', teacherController.create);
+
+routes.get('/profile', profileController.index);
+
+routes.get('/classes', classesControllers.index);
+routes.post('/classes', classesControllers.create);
+routes.delete('/classes/:id', classesControllers.delete)
 
 module.exports = routes;
