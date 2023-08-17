@@ -1,14 +1,10 @@
 const connection = require('../database/connection');
 module.exports = {
     async index (request, response) {
-        const { page = 1 } = request.query;
-
         const [count] = await connection('classes').count()
 
         const classes = await connection('classes')
         .join('teachers', 'teachers.id', '=', 'classes.teacher_id')
-        .limit(5)
-        .offset((page - 1) * 5)
         .select([
             'classes.*', 
             'teachers.name', 
@@ -51,5 +47,21 @@ module.exports = {
 
         await connection('classes').where('id', id).delete();
         return response.status(204).send();
+    },
+
+    async indexFiltered (request, response){
+        const { title } = request.params
+        const classes = await connection ('classes').whereRaw("LOWER(title) LIKE '%' || LOWER(?) || '%'", title)
+        .join('teachers', 'teachers.id', '=', 'classes.teacher_id')
+        .select([
+            'classes.*', 
+            'teachers.name', 
+            'teachers.email', 
+            'teachers.whatsapp', 
+            'teachers.city', 
+            'teachers.uf'
+        ]);       
+        return response.json (classes)
     }
 };
+

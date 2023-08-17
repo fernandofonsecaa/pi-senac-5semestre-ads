@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FiLogIn } from 'react-icons/fi';
+import { FiLogIn, FiArrowLeft } from 'react-icons/fi';
 import './styles.css';
 
 import api from '../../services/api';
@@ -41,9 +41,13 @@ export default function Logon() {
 										/>
                     <button className="button" type="submit">Entrar</button>
 
+                    <Link className="back-link" to="/">
+                        <FiArrowLeft size={16} color="#6c5883" />
+                        Voltar para Home
+                    </Link>
                     <Link className="back-link" to="/register">
                         <FiLogIn size={16} color="#6c5883" />
-                        Não tenho cadastro
+                        Cadastre-se
                     </Link>
                 </form>
             </section>

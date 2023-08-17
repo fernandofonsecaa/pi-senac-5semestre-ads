@@ -9,7 +9,7 @@ import logoImg from '../../assets/logo_reducedfixed.svg';
 export default function Profile () {
 		const [classes, setClasses] = useState([]);
 
-    const teacherName = localStorage.getItem('teacherName');
+    	const teacherName = localStorage.getItem('teacherName');
 		const teacherId = localStorage.getItem('teacherId');
 
 		const navigate = useNavigate();
@@ -55,22 +55,22 @@ export default function Profile () {
             <h1>Aulas cadastradas</h1>
             
             <ul>
-							{classes.map(classes => (
-								<li key={classes.id}>
-								<strong>AULA:</strong>
-								<p>{classes.title}</p>
+				{classes.map(classes => (
+					<li key={classes.id}>
+						<strong>AULA:</strong>
+						<p>{classes.title}</p>
 
-								<strong>SOBRE A AULA:</strong>
-								<p>{classes.description}</p>
+						<strong>SOBRE A AULA:</strong>
+						<p>{classes.description}</p>
 
-								<strong>VALOR:</strong>
-								<p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(classes.value)}</p>
+						<strong>VALOR:</strong>
+						<p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(classes.value)}</p>
 
-								<button onClick={() => handleDeleteClasses(classes.id)} type="button">
-										<FiTrash2 size={20} color="#a8a8b3"/>
-								</button>
-						</li>
-							))}
+						<button onClick={() => handleDeleteClasses(classes.id)} type="button">
+							<FiTrash2 size={20} color="#a8a8b3"/>
+						</button>
+					</li>
+				))}
             </ul>
         </div>
     )

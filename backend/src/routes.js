@@ -14,6 +14,7 @@ routes.post('/teachers', teacherController.create);
 routes.get('/profile', profileController.index);
 
 routes.get('/classes', classesControllers.index);
+routes.get('/classes/:title', classesControllers.indexFiltered);
 routes.post('/classes', classesControllers.create);
 routes.delete('/classes/:id', classesControllers.delete)
 
