@@ -37,7 +37,8 @@ Aqui no repositório do GitHub clique no botão verde escrito Code e copie a URL
 <span> Após copiar a URL, abra o Prompt de Comando, acesse qualquer pasta do seu computador onde queira instalar o projeto e digita o comando abaixo:
 git clone url-copiada-do-github
 </span>
-![image](https://user-images.githubusercontent.com/58637900/224493459-43c12c25-efa9-49cf-9e71-365a53a7688e.png)
+![image](https://github.com/fernandofonsecaa/pi-senac-5semestre-ads/assets/58637900/2ed9c28b-d70a-4616-a59f-e905833345a4)
+
 
 <span>Após instalar o projeto, ainda pelo Prompt de comando, entre na pasta do projeto recém-criada
 Dentro desta pasta terá duas pastas chamadas backend e frontend
