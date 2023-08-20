@@ -31,7 +31,8 @@ Para instalar o NodeJs, acesse o site oficial https://nodejs.org/en/ e instale a
 <span>Após ter instalado o NodeJs, vamos agora copiar a URL do projeto aqui do GitHub para clonarmos em nosso computador.
 Aqui no repositório do GitHub clique no botão verde escrito Code e copie a URL de HTTPS exibida </span>
 
-![image](https://user-images.githubusercontent.com/58637900/224493437-a9a01f0b-cea1-43be-bf0e-578dfe1b0627.png)
+![image](https://github.com/fernandofonsecaa/pi-senac-5semestre-ads/assets/58637900/5d91e8b7-4f59-4cbc-8c68-ffe432f3b039)
+
 
 <span> Após copiar a URL, abra o Prompt de Comando, acesse qualquer pasta do seu computador onde queira instalar o projeto e digita o comando abaixo:
 git clone url-copiada-do-github
